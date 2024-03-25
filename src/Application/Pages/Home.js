@@ -7,7 +7,7 @@ class Home extends Component {
     return (
         <div class="row">
           <div class="col-8">
-            <h2>Welcome to the React Chat!</h2>
+            <h2>Welcome to the React Chat test app!</h2>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
             <img 
               className="img-fluid" 
