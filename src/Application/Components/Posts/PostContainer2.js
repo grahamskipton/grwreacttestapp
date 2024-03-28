@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import LoadingImage from "../../../images/loadingImage.gif";
-import axios from "axios";
 
 function wait(ms){
     var start = new Date().getTime();
@@ -13,50 +12,7 @@ function wait(ms){
    }
  }
 
-  export default function PostContainer({url,showSummary,showCount}){
-    const [todoList, setTodoList] = useState(null);
-  wait(500);
-  useEffect(() => {
-  (async () => {
-  const todos = await axios.get(
-  url
-  );
-  setTodoList(todos.data);
-  })();
-  }, []);
-  
-function DisplaySomat(count,showSummary,url,arr)
-{
-  return (
-    <h1>Displaying somat {count} and {showSummary} and {url}</h1>
-    /*todoList.map((todo, index) => (
-      <h1>Go away!</h1>
-    ))*/
 
-    
-  );
-  
-}
-
-  return todoList ? (
-  <ul>
-
-
- {DisplaySomat(showCount,showSummary,url, )};
-
-  {todoList.map((todo, index) => (
-  
-
-  <li key={index} data-testid='todo'>{todo.title}</li>
-
-  ))}
-  </ul>
-  ) : (
-  <p>Loading....</p>
-  );
-  };
-  
-/*
 export default function PostContainer({url,showSummary,showCount}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +38,7 @@ export default function PostContainer({url,showSummary,showCount}) {
       <img 
         className="img-fluid" 
         src={LoadingImage} alt="logo"/>
-        <h4>Fetching Content...</h4>
+        <h4>Fetching Content!!</h4>
     </div>);
 
   if (error) return (
@@ -124,6 +80,6 @@ else
 }
 }
 
- */
+ 
 
     

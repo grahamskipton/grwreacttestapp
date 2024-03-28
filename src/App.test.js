@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, fireEvent, screen } from "@testing-library/react";
+import Home from "../src/Application/Pages/Home";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/CreateError/i);
-  expect(linkElement).toBeInTheDocument();
+//test block
+test("increments counter", () => {
+// render the component on virtual dom
+
+render(<Home />)
+const { getByText } = within(screen.getByTestId('body'))
+expect(getByText('lorum')).toBeInTheDocument()
+
 });
-
-

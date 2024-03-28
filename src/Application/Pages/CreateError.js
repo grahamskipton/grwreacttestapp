@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PostContainer from "../Components/Posts/PostContainer";
+import PostContainer from "../Components/Posts/PostContainer2";
 
 class CreateError extends Component {
   render() {

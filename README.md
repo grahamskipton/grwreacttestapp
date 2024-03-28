@@ -1,3 +1,45 @@
+## About this app
+
+This application was put together as a learning / test assessment and understanding around React apps
+
+## What this app does
+
+I've tried to keep this app as authentic to a three page app in the traditional sense, but utilising the SPA method and brining in / out components instead of loading separate pages.
+
+## Post Container Component 
+
+NB. Due to trying to refactor for testing and DI, PostContainer2.js is the working component. 
+
+Post container is a reusable component that accepts 3 parameters and is designed to operate / view differently depending on the params its called with. 
+Params being:
+ShowSummary - true will render out just the title of the content from the external API, false will render it all.
+ShowCount - The number of posts to display 
+URl - The URL where to get the posts from
+
+A fetch data loading spinner has been added so you can visually see that content is being brought in. Because the API is pretty instant, I've added a JS wait timer so that it stalls getting the content in and you can see it "fetching".
+
+Error handling has been added, so if there is a problem
+
+To make it look a little more authentic, I've added a bit of code to render out a pretend user based on user ID from the post api - essentially changing the userID number into an actual name.  
+
+## What are the 'pages'.
+Home.js
+Renders a bit of standard homepage guff with a sidebar of the post api data, just calling 5 posts and a summary.
+
+otherlayout.js
+Renders just the post container but a non summary version and including all posts from the API. Included a view / hide button to show the actual body of the post. 
+
+createerror.js 
+Purposely calls the API with a broken URL to get the post container to fail and show a gracious error message to the user.
+
+## TODO
+Implement testing of the components. As I have not correctly rendered or included my components, being able to do any sort of testing has been a bit of a problem.
+
+I need to get a better understanding of how the components work and fit together and then be in a position to refactor them and add unit testing.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
