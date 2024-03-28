@@ -1,3 +1,5 @@
+# React-ion - The sample React training demo site.
+
 ## About this app
 
 This application was put together as a learning / test assessment and understanding around React apps
